@@ -80,6 +80,9 @@ sh
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 **Emmanuel Obi**
+- GitHub: [@Gmanlove](https://github.com/Gmanlove)
+
 👤 **Musong Ernest**
 
 - GitHub: [@ernestmusong](https://github.com/ernestmusong)
