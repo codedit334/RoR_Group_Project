@@ -10,4 +10,5 @@ class User < ApplicationRecord
   def confirmed?
     true
   end
+
 end
