@@ -1,26 +1,26 @@
-<h1>Food List</h1>
+<h1 class="food_name">Food List</h1>
 
-<p><%= link_to 'Add Food', new_food_path %></p>
+<p><%= link_to 'Add Food', new_food_path, class: "btn_new_food" %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th><%= sortable 'name' %></th>
-      <th><%= sortable 'measurement_unit' %></th>
-      <th><%= sortable 'price' %></th>
-      <th><%= sortable 'quantity' %></th>
-      <th>Actions</th>
+<table id="foods">
+  <thead class="love">
+    <tr class="love">
+      <th class="love"><%= sortable 'name' %></th>
+      <th class="love"><%= sortable 'measurement_unit' %></th>
+      <th class="love"><%= sortable 'price' %></th>
+      <th class="love"><%= sortable 'quantity' %></th>
+      <th class="love">Actions</th>
     </tr>
   </thead>
   <tbody>
     <% @foods.each do |food| %>
-      <tr>
+      <tr class="ken">
         <td><%= food.name %></td>
         <td><%= food.measurement_unit %></td>
         <td><%= number_to_currency(food.price) %></td>
         <td><%= food.quantity %></td>
         <td>
-          <%= button_to 'DELETE', food_path(food), method: :delete %>
+          <%= button_to 'DELETE', food_path(food), method: :delete, class: "btn_delete" %>
         </td>
       </tr>
     <% end %>
