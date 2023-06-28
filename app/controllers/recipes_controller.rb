@@ -31,9 +31,7 @@ class RecipesController < ApplicationController
       food_quantities = recipe_params[:food_quantities]
       food_quantities&.each do |food_id, quantity|
         # Process each food quantity as needed
-        unless quantity.to_i < 1
-          @recipe.recipe_foods.create(food_id: food_id, quantity: quantity.to_i, recipe_id: @recipe.id)
-        end
+        @recipe.recipe_foods.create(food_id:, quantity: quantity.to_i, recipe_id: @recipe.id) unless quantity.to_i < 1
       end
       redirect_to recipes_path
     else
