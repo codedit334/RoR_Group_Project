@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   # root to: "home#index"
 
   resources :foods, except: [:update]
+  resources :shopping_lists, only: [:index]
 end
