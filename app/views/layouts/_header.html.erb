@@ -1,0 +1,23 @@
+<nav>
+            <div class="menu">
+                <ul>
+                <li><%= link_to 'Foods', foods_path %></li>
+                <li>
+                <%= link_to 'Recipes', recipes_path %> 
+                </li>
+                <li>
+                <%= link_to 'Public Recipes', public_recipes_path %> 
+                </li>
+                <li>
+                <%= link_to 'General Shopping List', general_shopping_lists_path %> 
+                </li>
+                <li>
+                    <% if user_signed_in? %>
+                    <%= button_to 'Log out', destroy_user_session_path, method: :delete %>
+                    <% else %>
+                    <%= link_to 'Sign in', new_user_session_path %>
+                    <% end %>
+                </li>
+                </ul>
+            </div>
+</nav>

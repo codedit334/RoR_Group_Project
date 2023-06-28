@@ -2,12 +2,12 @@ class RecipeFoodsController < ApplicationController
   layout 'standard'
 
   def new
-    @recipe = Recipe.find(params[:recipe_id])
+    @recipe = Recipe.includes(:recipe_foods).find(params[:recipe_id])
     @recipe_food = @recipe.recipe_foods.build
   end
 
   def create
-    @recipe = Recipe.find(params[:recipe_id])
+    @recipe = Recipe.includes(:recipe_foods).find(params[:recipe_id])
 
     if recipe_food_params[:quantity].blank?
       redirect_to new_recipe_recipe_food_path(@recipe), alert: 'Quantity is required.'

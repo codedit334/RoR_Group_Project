@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
 
+  resources :foods, except: [:update]
+  resources :shopping_lists, only: [:index]
   resources :recipes, except: [:update] do
     resources :foods, only: [:new, :create, :destroy]
     resources :recipe_foods, only: [:new, :create, :destroy]
@@ -11,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :public_recipes, except: [:update]
 
-  resources :general_shopping_list, only: [:index]
+  resources :general_shopping_lists, only: [:index]
 
   root 'public_recipes#index'
 end
