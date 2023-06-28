@@ -2,20 +2,20 @@ require 'rails_helper'
 
 RSpec.describe 'RecipeFoods', type: :request do
   let(:user) { FactoryBot.create(:user, email: 'oussama_elabdioui@hotmail.com') }
-  let(:recipe) { FactoryBot.create(:recipe, user: user) }
+  let(:recipe) { FactoryBot.create(:recipe, user:) }
 
   before do
     post user_session_path, params: {
-        user: {
-          email: user.email,
-          password: user.password
-        }
+      user: {
+        email: user.email,
+        password: user.password
       }
+    }
   end
 
   describe 'POST /recipes/:recipe_id/recipe_foods' do
     it 'creates a new recipe food' do
-      food = FactoryBot.create(:food, user: user)
+      food = FactoryBot.create(:food, user:)
 
       post "/recipes/#{recipe.id}/recipe_foods", params: {
         recipe_food: {
@@ -43,8 +43,8 @@ RSpec.describe 'RecipeFoods', type: :request do
     end
 
     it 'updates existing recipe food quantity' do
-      food = FactoryBot.create(:food, user: user)
-      existing_recipe_food = FactoryBot.create(:recipe_food, recipe: recipe, food: food)
+      food = FactoryBot.create(:food, user:)
+      existing_recipe_food = FactoryBot.create(:recipe_food, recipe:, food:)
 
       post "/recipes/#{recipe.id}/recipe_foods", params: {
         recipe_food: {
@@ -62,7 +62,7 @@ RSpec.describe 'RecipeFoods', type: :request do
 
   describe 'DELETE /recipes/:recipe_id/recipe_foods/:id' do
     it 'deletes an existing recipe food' do
-      recipe_food = FactoryBot.create(:recipe_food, recipe: recipe)
+      recipe_food = FactoryBot.create(:recipe_food, recipe:)
 
       delete "/recipes/#{recipe.id}/recipe_foods/#{recipe_food.id}"
 

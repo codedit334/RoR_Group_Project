@@ -17,13 +17,13 @@ RSpec.describe User, type: :model do
   describe 'associations' do
     it 'has many recipes' do
       user = FactoryBot.create(:user)
-      recipe = FactoryBot.create(:recipe, user: user)
+      recipe = FactoryBot.create(:recipe, user:)
       expect(user.recipes).to include(recipe)
     end
 
     it 'has many foods' do
       user = FactoryBot.create(:user)
-      food = FactoryBot.create(:food, user: user)
+      food = FactoryBot.create(:food, user:)
       expect(user.foods).to include(food)
     end
   end
@@ -35,4 +35,3 @@ RSpec.describe User, type: :model do
     end
   end
 end
-

@@ -16,7 +16,7 @@ RSpec.describe 'Foods', type: :request do
 
   describe 'GET /foods' do
     it 'returns a list of foods' do
-      FactoryBot.create_list(:food, 5, user: user)
+      FactoryBot.create_list(:food, 5, user:)
 
       get '/foods'
 
@@ -51,7 +51,7 @@ RSpec.describe 'Foods', type: :request do
 
   describe 'DELETE /foods/:id' do
     it 'deletes an existing food' do
-      food = FactoryBot.create(:food, user: user)
+      food = FactoryBot.create(:food, user:)
 
       delete "/foods/#{food.id}"
 
@@ -60,4 +60,3 @@ RSpec.describe 'Foods', type: :request do
     end
   end
 end
-

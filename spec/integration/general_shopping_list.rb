@@ -9,10 +9,10 @@ RSpec.describe 'GeneralShoppingLists', type: :request do
 
   describe 'GET /general_shopping_lists' do
     it 'displays the shopping list' do
-      recipe1 = FactoryBot.create(:recipe, user: user, public: true)
-      recipe2 = FactoryBot.create(:recipe, user: user, public: true)
-      food1 = FactoryBot.create(:food, user: user, quantity: 10)
-      food2 = FactoryBot.create(:food, user: user, quantity: 5)
+      recipe1 = FactoryBot.create(:recipe, user:, public: true)
+      recipe2 = FactoryBot.create(:recipe, user:, public: true)
+      food1 = FactoryBot.create(:food, user:, quantity: 10)
+      food2 = FactoryBot.create(:food, user:, quantity: 5)
 
       FactoryBot.create(:recipe_food, recipe: recipe1, food: food1, quantity: 2)
       FactoryBot.create(:recipe_food, recipe: recipe2, food: food2, quantity: 3)

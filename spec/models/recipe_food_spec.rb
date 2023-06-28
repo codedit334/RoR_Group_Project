@@ -16,7 +16,7 @@ RSpec.describe RecipeFood, type: :model do
     it 'is not valid with a negative quantity' do
       recipe_food = FactoryBot.build(:recipe_food, quantity: -1)
       expect(recipe_food).not_to be_valid
-      expect(recipe_food.errors[:quantity]).to include("must be greater than or equal to 0")
+      expect(recipe_food.errors[:quantity]).to include('must be greater than or equal to 0')
     end
   end
 

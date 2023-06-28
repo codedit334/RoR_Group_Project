@@ -5,17 +5,17 @@ RSpec.describe 'Recipes', type: :request do
 
   before do
     post user_session_path, params: {
-        user: {
-          email: user.email,
-          password: user.password
-        }
+      user: {
+        email: user.email,
+        password: user.password
       }
+    }
   end
 
   describe 'GET /recipes' do
     it 'displays the user\'s recipes' do
-      recipe1 = FactoryBot.create(:recipe, user: user, name: 'Recipe 1')
-      recipe2 = FactoryBot.create(:recipe, user: user, name: 'Recipe 2')
+      FactoryBot.create(:recipe, user:, name: 'Recipe 1')
+      FactoryBot.create(:recipe, user:, name: 'Recipe 2')
 
       get '/recipes'
 
@@ -27,7 +27,7 @@ RSpec.describe 'Recipes', type: :request do
 
   describe 'GET /recipes/:id' do
     it 'displays the recipe details' do
-      recipe = FactoryBot.create(:recipe, user: user, name: 'Recipe')
+      recipe = FactoryBot.create(:recipe, user:, name: 'Recipe')
 
       get "/recipes/#{recipe.id}"
 
@@ -47,8 +47,8 @@ RSpec.describe 'Recipes', type: :request do
 
   describe 'POST /recipes' do
     it 'creates a new recipe' do
-      food1 = FactoryBot.create(:food, user: user, name: 'Food 1')
-      food2 = FactoryBot.create(:food, user: user, name: 'Food 2')
+      food1 = FactoryBot.create(:food, user:, name: 'Food 1')
+      food2 = FactoryBot.create(:food, user:, name: 'Food 2')
 
       post '/recipes', params: {
         recipe: {
@@ -72,7 +72,7 @@ RSpec.describe 'Recipes', type: :request do
 
   describe 'DELETE /recipes/:id' do
     it 'deletes an existing recipe' do
-      recipe = FactoryBot.create(:recipe, user: user)
+      recipe = FactoryBot.create(:recipe, user:)
 
       delete "/recipes/#{recipe.id}"
 

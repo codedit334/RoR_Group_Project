@@ -5,11 +5,11 @@ RSpec.describe 'PublicRecipes', type: :request do
 
   before do
     post user_session_path, params: {
-        user: {
-          email: user.email,
-          password: user.password
-        }
+      user: {
+        email: user.email,
+        password: user.password
       }
+    }
   end
 
   describe 'GET /public_recipes' do
