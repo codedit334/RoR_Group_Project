@@ -7,8 +7,20 @@ class RecipesController < ApplicationController
     @recipes = @user.recipes
   end
 
+  def show
+    @user = current_user
+    @recipe = Recipe.find(params[:id])
+  end
+
   def new
     @recipe = Recipe.new
+    @foods = current_user.foods
+  end
+
+  def toggle_public
+    @recipe = Recipe.find(params[:id])
+    @recipe.update(public: !@recipe.public)
+    redirect_to @recipe, notice: 'Recipe public status updated.'
   end
 
   def create
@@ -19,7 +31,9 @@ class RecipesController < ApplicationController
       food_quantities = recipe_params[:food_quantities]
       food_quantities&.each do |food_id, quantity|
         # Process each food quantity as needed
-        @recipe.recipe_foods.create(food_id:, quantity: quantity.to_i, recipe_id: @recipe.id) unless quantity.to_i < 1
+        unless quantity.to_i < 1
+          @recipe.recipe_foods.create(food_id: food_id, quantity: quantity.to_i, recipe_id: @recipe.id)
+        end
       end
       redirect_to recipes_path
     else
@@ -27,13 +41,9 @@ class RecipesController < ApplicationController
     end
   end
 
-  def show
-    @recipe = Recipe.find(params[:id])
-  end
-
   def destroy
     @recipe = Recipe.find(params[:id])
-    # Destroy all recipe_foods
+    # destroy all recipe_foods
     @recipe.recipe_foods&.destroy_all
 
     @recipe.destroy

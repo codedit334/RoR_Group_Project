@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  # Add the following route for signing out
   resources :users, only: [:show]
 
-  resources :recipes, except: [:update]
+  resources :recipes, except: [:update] do
+    resources :foods, only: [:new, :create, :destroy]
+    resources :recipe_foods, only: [:new, :create, :destroy]
+    patch 'toggle_public', on: :member
+  end
+
   resources :public_recipes, except: [:update]
 
-  get '/public_recipes', to: 'public_recipes#index'
+  resources :general_shopping_list, only: [:index]
 
-  # Defines the root path route ("/")
   root 'public_recipes#index'
 end
