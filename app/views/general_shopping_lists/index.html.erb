@@ -13,12 +13,12 @@
     </tr>
   </thead>
   <tbody>
-    <% @missing_foods.each do |name, quantity| %>
+    <% @missing_foods.each do |missing_food| %>
       <tr>
-        <td><%= name %></td>
-        <td><%= @general_food_list.find_by(name: name).measurement_unit %></td>
-        <td><%= @general_food_list.find_by(name: name).price %></td>
-        <td><%= quantity %></td>
+        <td><%= missing_food[:name] %></td>
+        <td><%= @general_food_list.find_by(name: missing_food[:name]).measurement_unit %></td>
+        <td><%= @general_food_list.find_by(name: missing_food[:name]).price %></td>
+        <td><%= missing_food[:quantity] %></td>
       </tr>
     <% end %>
   </tbody>
