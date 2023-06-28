@@ -1,4 +1,4 @@
-class ShoppingListsController < ApplicationController
+class GeneralShoppingListsController < ApplicationController
   def index
     @user = current_user
     @recipes = @user.recipes
