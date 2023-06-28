@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :public_recipes, except: [:update]
 
-  resources :general_shopping_list, only: [:index]
+  resources :general_shopping_lists, only: [:index]
 
   root 'public_recipes#index'
 end
