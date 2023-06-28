@@ -58,6 +58,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'rack_session_access'
 end
 
 group :development do
