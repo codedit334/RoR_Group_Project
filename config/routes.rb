@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
 
   resources :foods, except: [:update]
-  resources :shopping_lists, only: [:index]
   resources :recipes, except: [:update] do
     resources :foods, only: [:new, :create, :destroy]
     resources :recipe_foods, only: [:new, :create, :destroy]
