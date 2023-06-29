@@ -1,5 +1,5 @@
 <a name="readme-top"></a>
-  <h3><b>Blog app</b></h3>
+  <h3><b>Recipe App</b></h3>
 
 # 📗 Table of Contents
 

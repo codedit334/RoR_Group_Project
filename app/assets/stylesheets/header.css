@@ -1,0 +1,145 @@
+body {
+  font-family: 'poppins', sans-serif;
+}
+
+header {
+  width: 100%;
+  background: none;
+  padding: 0 20px;
+}
+
+.menu {
+  background-color: #f5f5f5;
+}
+
+.menu ul {
+  list-style-type: none;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 60px;
+}
+
+.menu li:last-child {
+  margin-right: 10px;
+}
+
+.nav-title {
+  font-size: 35px;
+  text-decoration: none;
+  color: black;
+  height: 30px;
+  font-family: "Philosopher", sans-serif;
+}
+
+.nav-item {
+  font-size: 25px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav-item:hover {
+  color: red;
+}
+
+.nav_items {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.nav-btn {
+  border-radius: 15px;
+  font-size: 14px;
+  padding: 6px 8px;
+  width: 100px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  background-color: #e53935;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  color: red;
+  background-color: #c62828;
+  border: 2px solid red;
+  padding: 4.5px 8px;
+  font-size: 15px;
+}
+
+.nav_name {
+  font-size: 25px;
+  padding-left: 20px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.sign_out {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  height: 35px;
+  align-items: center;
+}
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+.hamburger-btn,
+.close-btn {
+  display: none;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+  .menu {
+    position: relative;
+    z-index: 1000;
+  }
+
+  .mobile-menu-toggle {
+    display: block; /* Display the toggle button */
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .hamburger-btn {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin-bottom: 6px;
+  }
+
+  .hamburger-btn,
+  .close-btn {
+    display: block;
+  }
+
+  .menu-items {
+    display: none; /* Hide the menu items by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f5f5f5;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .menu-items.show {
+    display: block; /* Show the menu items when the toggle button is clicked */
+  }
+
+  .menu-items li {
+    display: block;
+    margin-bottom: 10px;
+  }
+}

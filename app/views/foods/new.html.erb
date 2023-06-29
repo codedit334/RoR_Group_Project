@@ -1,4 +1,4 @@
-<h1>Add Food</h1>
+<h1 class="food_name">Add Food</h1>
 
 <%= form_with(model: @food, url: foods_path) do |form| %>
   <% if @food.errors.any? %>
@@ -13,27 +13,27 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="table_unit">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
-  <div>
+  <div class="table_unit">
     <%= form.label :measurement_unit %>
     <%= form.text_field :measurement_unit %>
   </div>
 
-  <div>
+  <div class="table_unit">
     <%= form.label :price %>
     <%= form.text_field :price %>
   </div>
 
-  <div>
+  <div class="table_unit">
     <%= form.label :quantity %>
     <%= form.text_field :quantity %>
   </div>
 
-  <div>
+  <div class="table_unit">
     <%= form.submit 'Create Food' %>
   </div>
 <% end %>
