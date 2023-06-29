@@ -1,5 +1,5 @@
 <a name="readme-top"></a>
-  <h3><b>Blog app</b></h3>
+  <h3><b>Recipe App</b></h3>
 
 # 📗 Table of Contents
 
@@ -22,9 +22,9 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [Catalog of my things] <a name="about-project"></a>
+# 📖 [Recipe-App] <a name="about-project"></a>
 
-**[Catalog of my things]** Blog App is a web application that allows users to create, read, update, and delete blog posts. Users can sign up for an account, create new blog posts, and edit or delete their existing posts.
+**[Recipe-App]** Recipe is a web application that allows users to create, read, update, and delete owned foods, recipes, and shopping lists. Users can sign up for an account to use the app.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -45,9 +45,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Add new post]**
-- **[Add new comment]**
-- **[Add new like]**
+- **[Add new food]**
+- **[Add new recipe]**
+- **[Make the recipe either public or private]**
+- **[Generate shopping list]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -62,7 +63,7 @@ Ruby version >= 3.0.0
 Clone this repository to your desired folder:
 sh
   cd my-folder
- git clone https://github.com/ernestmusong/Blog-app.git
+ git clone https://github.com/codedit334/RoR_Group_Project.git
 
  ### Install:
  Run: bundle install
@@ -80,18 +81,18 @@ sh
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Musong Ernest**
+👤 **Oussama Elabdioui**
 
-- GitHub: [@ernestmusong](https://github.com/ernestmusong)
-- Twitter: [@MusongAkeh](https://twitter.com/MusongAkeh)
-- LinkedIn: [Musong Ernest](https://www.linkedin.com/in/musongernestakeh/)
+- GitHub: [@codedit334](https://github.com/codedit334)
+- Twitter: [@oussedit](https://twitter.com/oussedit)
+- LinkedIn: [Oussama Elabdioui](https://www.linkedin.com/in/oussama-elabdioui-4677a41b6/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[reply to a comment]**
-- [ ] **[Search for specific blog posts based on keywords or tags]**
+- [ ] **[Search for recipes]**
+- [ ] **[Deploy the app]**
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,7 +100,7 @@ sh
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ernestmusong/Blog-app/issues).
+Feel free to check the [issues page](https://github.com/codedit334/RoR_Group_Project/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,6 +118,6 @@ If you like this project, give it a star please!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
-  This project is [MIT](./LICENSE.txt) licensed.
+  This project is [MIT](./LICENSE.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
