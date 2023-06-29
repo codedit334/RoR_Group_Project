@@ -3,25 +3,27 @@ body {
 }
 
 header {
-  display: flex;
   width: 100%;
   background: none;
   padding: 0 20px;
 }
 
 .menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 60px;
-  border-bottom: 1px solid black;
+  background-color: #f5f5f5;
+
 }
 
-.menu li {
-  list-style: none;
+.menu ul {
+    list-style-type: none;
 }
+.menu li {
+  display: inline-block;
+  margin-right: 60px;
+}
+
+.menu li:last-child {
+    margin-right: 10px;
+  }
 
 .nav-title {
   font-size: 35px;
@@ -34,7 +36,8 @@ header {
 .nav-item {
   font-size: 25px;
   text-decoration: none;
-  color: black;
+  color: #333;
+  font-weight: bold;
 }
 
 .nav-item:hover {
@@ -57,14 +60,16 @@ header {
   border: 1px solid red;
   display: flex;
   justify-content: center;
-  background-color: red;
-  color: white;
+  background-color: #e53935;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
   cursor: pointer;
 }
 
 .nav-btn:hover {
   color: red;
-  background-color: white;
+  background-color: #c62828;
   border: 2px solid red;
   padding: 4.5px 8px;
   font-size: 15px;
@@ -74,37 +79,66 @@ header {
   font-size: 25px;
   padding-left: 20px;
   text-decoration: none;
+  margin-right: 10px;
 }
 
 .sign_out {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
   gap: 15px;
   height: 35px;
+  align-items: center;
 }
 
+.mobile-menu-toggle{
+    display: none;
+}
 .hamburger-btn,
 .close-btn {
   display: none;
 }
-
-@media only screen and (max-width: 1200px) {
-  .menu {
-    font-size: 23px;
+  
+  /* Media Query for Mobile View */
+  @media (max-width: 768px) {
+    .menu {
+      position: relative;
+    }
+  
+    .mobile-menu-toggle {
+      display: block; /* Display the toggle button */
+      cursor: pointer;
+      padding: 10px;
+    }
+  
+    .hamburger-btn {
+      width: 30px;
+      height: 3px;
+      background-color: #333;
+      margin-bottom: 6px;
+    }
+    
+    .hamburger-btn,
+    .close-btn {
+      display: block;
+    }
+    .menu-items {
+      display: none; /* Hide the menu items by default */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f5f5f5;
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .menu-items.show {
+      display: block; /* Show the menu items when the toggle button is clicked */
+    }
+  
+    .menu-items li {
+      display: block;
+      margin-bottom: 10px;
+    }
+  
   }
-
-  .nav_name {
-    font-size: 20px;
-    padding-bottom: 2px;
-  }
-
-  .nav-item {
-    font-size: 18px;
-    padding-bottom: 3px;
-  }
-
-  .nav_items {
-    gap: 10px;
-  }
-}
+  
