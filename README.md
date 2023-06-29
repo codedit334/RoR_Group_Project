@@ -87,6 +87,10 @@ sh
 - Twitter: [@oussedit](https://twitter.com/oussedit)
 - LinkedIn: [Oussama Elabdioui](https://www.linkedin.com/in/oussama-elabdioui-4677a41b6/)
 
+
+👤 **Emmanuel Obi**
+- GitHub: [@Gmanlove](https://github.com/Gmanlove)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
