@@ -103,6 +103,7 @@ header {
 @media (max-width: 768px) {
   .menu {
     position: relative;
+    z-index: 1000;
   }
 
   .mobile-menu-toggle {
