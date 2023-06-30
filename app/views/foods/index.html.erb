@@ -1,0 +1,32 @@
+<%= render 'layouts/header' %>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<h1 class="food_name">Food List</h1>
+
+<p><%= link_to 'Add Food', new_food_path, class: "btn_new_food" %></p>
+
+<table id="foods">
+  <thead class="love">
+    <tr class="love">
+      <th class="love"><%= sortable 'name' %></th>
+      <th class="love"><%= sortable 'measurement_unit' %></th>
+      <th class="love"><%= sortable 'price' %></th>
+      <th class="love"><%= sortable 'quantity' %></th>
+      <th class="love">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @foods.each do |food| %>
+      <tr class="ken">
+        <td><%= food.name %></td>
+        <td><%= food.measurement_unit %></td>
+        <td><%= number_to_currency(food.price) %></td>
+        <td><%= food.quantity %></td>
+        <td>
+          <%= button_to 'DELETE', food_path(food), method: :delete, class: "btn_delete" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

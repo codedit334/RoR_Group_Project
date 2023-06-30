@@ -1,0 +1,132 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@400;500;600;700;800&family=Poppins&family=Roboto:wght@700&display=swap');
+@import "navbar.css";
+@import "home.css";
+@import "form.css";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image:
+    linear-gradient(
+      to left,
+      rgb(223, 217, 217),
+      rgb(230, 230, 231)
+    );
+}
+
+.header-title {
+  text-align: center;
+}
+
+.form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.form-submit {
+  padding: 3rem 0;
+}
+
+input[type='submit'] {
+  margin: 0 5%;
+}
+
+.recipe-container {
+  display: flex;
+  width: 80%;
+  margin: 1rem auto;
+  padding: 1rem 0;
+}
+
+.recipe-container div {
+  width: 50%;
+}
+
+.preparation-toggle {
+  display: flex;
+  padding: 0 2rem;
+  margin: 1rem 0;
+  gap: 200px;
+}
+
+.preparation {
+  margin-right: 35%;
+}
+
+.meta-k {
+  width: 30%;
+}
+
+.button-group {
+  display: inline-flex; /* Displays the buttons in a horizontal line */
+  gap: 100px; /* Adds a 10px gap between the buttons */
+}
+
+.prep-tion {
+  margin-right: 40%;
+}
+
+.button_to {
+  margin: 0 auto;
+}
+
+.shopping-list-table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+.shopping-list-table th,
+.shopping-list-table td {
+  border: 1px solid #000;
+  padding: 8px;
+}
+
+.shopping-list-table th {
+  background-color: #f2f2f2;
+}
+
+.shopping-list-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+  height: 105vh;
+}
+
+.total-missing {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
