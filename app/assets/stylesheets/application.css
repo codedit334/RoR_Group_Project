@@ -80,13 +80,14 @@ input[type='submit'] {
 }
 
 .meta-k {
-width: 30%;
+  width: 30%;
 }
 
 .button-group {
   display: inline-flex; /* Displays the buttons in a horizontal line */
   gap: 100px; /* Adds a 10px gap between the buttons */
 }
+
 .prep-tion {
   margin-right: 40%;
 }
