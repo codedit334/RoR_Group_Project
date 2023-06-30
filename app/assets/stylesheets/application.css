@@ -79,6 +79,14 @@ input[type='submit'] {
   margin-right: 35%;
 }
 
+.meta-k {
+width: 30%;
+}
+
+.button-group {
+  display: inline-flex; /* Displays the buttons in a horizontal line */
+  gap: 100px; /* Adds a 10px gap between the buttons */
+}
 .prep-tion {
   margin-right: 40%;
 }
@@ -116,4 +124,8 @@ input[type='submit'] {
 
 .total-missing {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
 }

@@ -41,6 +41,7 @@
 <th> Food </th>
 <th> Quantity </th>
 <th> Value </th>
+<th> Actions </th>
  </tr>
  </thead>
  <tbody>
@@ -50,7 +51,14 @@
    <td><%="#{recipe_food.quantity} #{recipe_food.food.measurement_unit}"%></td>
     <td><%= recipe_food.quantity * recipe_food.food.price %>$</td>
     <%if can?(:update,@recipe)%>
-    <td><%= button_to 'Delete',recipe_recipe_food_path(@recipe,recipe_food),method: :delete, class: 'btn btn-danger' %></td>
+    
+    <td class='meta-k'>
+    <div class="button-group">
+    <%= button_to 'Delete',recipe_recipe_food_path(@recipe,recipe_food),method: :delete, class: 'btn btn-danger' %>
+    <button class='btn btn-success'>Modify 
+    </div>
+    </td>
+
     <%end%>
   </tr>
 
