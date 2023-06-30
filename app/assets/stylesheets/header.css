@@ -77,11 +77,16 @@ header {
 
 .nav_name {
   font-size: 25px;
-  padding-left: 20px;
   text-decoration: none;
-  margin-right: 10px;
+  color: rgb(136, 127, 255);
+  align-content: center;
 }
 
+
+
+.nav_name {
+  margin-bottom: 20px;
+}
 .sign_out {
   display: flex;
   flex-direction: row;

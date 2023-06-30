@@ -90,6 +90,8 @@ sh
 
 👤 **Emmanuel Obi**
 - GitHub: [@Gmanlove](https://github.com/Gmanlove)
+- LinkedIn: [Obi Emmanuel](https://www.linkedin.com/in/emmanuelgozieobi/)
+- Twitter: [@brightgman2](https://twitter.com/brightgman2)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -5,7 +5,7 @@ class GeneralShoppingListsController < ApplicationController
     @general_food_list = @user.foods
 
     @missing_foods = calculate_missing_foods
-    @total_count = calculate_total_count
+    @total_items = @missing_foods.length
     @total_price = calculate_total_price
   end
 
@@ -26,8 +26,9 @@ class GeneralShoppingListsController < ApplicationController
       next unless general_food_quantities[name].to_i < quantity
 
       missing_food = {
-        name:,
-        quantity: quantity - general_food_quantities[name].to_i
+        name: name,
+        quantity: quantity - general_food_quantities[name].to_i,
+        price: calculate_food_price(name)
       }
       missing_foods << missing_food
     end
@@ -35,18 +36,12 @@ class GeneralShoppingListsController < ApplicationController
     missing_foods
   end
 
-  def calculate_total_count
-    @missing_foods.sum { |missing_food| missing_food[:quantity] }
+  def calculate_food_price(food_name)
+    food = @general_food_list.find_by(name: food_name)
+    food.present? && food.price.present? ? food.price.to_f : 0
   end
 
   def calculate_total_price
-    total_price = 0
-    @missing_foods.each do |missing_food|
-      name = missing_food[:name]
-      quantity = missing_food[:quantity]
-      food = @general_food_list.find_by(name:)
-      total_price += food&.price.to_f * quantity if food
-    end
-    total_price
+    @missing_foods.sum { |missing_food| missing_food[:price] * missing_food[:quantity] }
   end
 end
