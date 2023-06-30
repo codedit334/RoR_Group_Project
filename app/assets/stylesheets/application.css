@@ -74,17 +74,19 @@ input[type='submit'] {
   margin: 1rem 0;
   gap: 200px;
 }
-.preparation{
+
+.preparation {
   margin-right: 35%;
 }
 
-.prep-tion{
+.prep-tion {
   margin-right: 40%;
 }
 
 .button_to {
   margin: 0 auto;
 }
+
 .shopping-list-table {
   border-collapse: collapse;
   width: 50%;
@@ -114,8 +116,4 @@ input[type='submit'] {
 
 .total-missing {
   margin-bottom: 20px;
-}
-
-.shopping-list-table {
-  margin: 0 auto;
 }

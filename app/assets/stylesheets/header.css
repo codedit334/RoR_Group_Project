@@ -82,11 +82,6 @@ header {
   align-content: center;
 }
 
-
-
-.nav_name {
-  margin-bottom: 20px;
-}
 .sign_out {
   display: flex;
   flex-direction: row;

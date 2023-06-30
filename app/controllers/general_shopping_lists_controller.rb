@@ -26,7 +26,7 @@ class GeneralShoppingListsController < ApplicationController
       next unless general_food_quantities[name].to_i < quantity
 
       missing_food = {
-        name: name,
+        name:,
         quantity: quantity - general_food_quantities[name].to_i,
         price: calculate_food_price(name)
       }
